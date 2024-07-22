@@ -86,7 +86,6 @@ jobs:
             echo "NODE_ENV=production" > /home/ubuntu/apps/build/.env
             echo "PORT=your_port_number" >> /home/ubuntu/apps/build/.env
             echo "DATABASE_URL=your_database_url" >> /home/ubuntu/apps/build/.env
-            
 
       - name: Install Dependencies and Restart Application
         uses: appleboy/ssh-action@master  # Installs dependencies nes and restarts the application using a process manager
@@ -110,4 +109,3 @@ jobs:
               echo "Application is not running. Starting..."
               pm2 start yarn --name auth -- start
             fi
-
